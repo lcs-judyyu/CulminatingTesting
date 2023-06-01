@@ -11,7 +11,9 @@ import SwiftUI
 struct CulminatingTestingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                GamingView()
+            }
         }
     }
 }
