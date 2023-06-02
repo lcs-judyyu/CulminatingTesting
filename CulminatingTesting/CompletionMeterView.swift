@@ -70,7 +70,6 @@ struct CompletionMeterView: View {
 //                .padding(.leading, 50)
             
         }
-        .padding(.vertical)
     }
 }
 
