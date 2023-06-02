@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22074AF42A28D36000D838FE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22074AF32A28D36000D838FE /* SettingsView.swift */; };
+		2267536A2A28E6B000130C69 /* ButtonStyleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226753692A28E6B000130C69 /* ButtonStyleViewModifier.swift */; };
 		22CEAB852A25AA8B009F5C58 /* CulminatingTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CEAB842A25AA8B009F5C58 /* CulminatingTestingApp.swift */; };
 		22CEAB872A25AA8B009F5C58 /* GamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CEAB862A25AA8B009F5C58 /* GamingView.swift */; };
 		22CEAB892A25AA8C009F5C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CEAB882A25AA8C009F5C58 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		22074AF32A28D36000D838FE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		226753692A28E6B000130C69 /* ButtonStyleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleViewModifier.swift; sourceTree = "<group>"; };
 		22CEAB812A25AA8B009F5C58 /* CulminatingTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CulminatingTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CEAB842A25AA8B009F5C58 /* CulminatingTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulminatingTestingApp.swift; sourceTree = "<group>"; };
 		22CEAB862A25AA8B009F5C58 /* GamingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamingView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				22CEAB842A25AA8B009F5C58 /* CulminatingTestingApp.swift */,
 				22CEAB862A25AA8B009F5C58 /* GamingView.swift */,
 				22074AF32A28D36000D838FE /* SettingsView.swift */,
+				226753692A28E6B000130C69 /* ButtonStyleViewModifier.swift */,
 				22CEAB882A25AA8C009F5C58 /* Assets.xcassets */,
 				22CEAB8A2A25AA8C009F5C58 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				22074AF42A28D36000D838FE /* SettingsView.swift in Sources */,
 				22CEAB872A25AA8B009F5C58 /* GamingView.swift in Sources */,
 				22CEAB852A25AA8B009F5C58 /* CulminatingTestingApp.swift in Sources */,
+				2267536A2A28E6B000130C69 /* ButtonStyleViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
