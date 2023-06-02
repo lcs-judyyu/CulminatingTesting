@@ -15,7 +15,7 @@ struct GamingView: View {
     
     @State var date: Int = 1
     
-    @State var energy: Int = 8
+    @State var energy: Int = 7
     
     @State var mentality: Int = 8
     
@@ -82,7 +82,7 @@ struct GamingView: View {
                     .padding(.horizontal, 20)
                     
                     // Illustration
-                    Image("Coast3")
+                    Image("Coast")
                         .resizable()
                         .scaledToFit()
                     
@@ -170,28 +170,11 @@ struct GamingView: View {
                     VStack(alignment: .leading, spacing: 15) {
                         
                         HStack {
-                            
                             // Energy
                             Text("Energy")
-                            ZStack(alignment: .center) {
-                                
-                                // Completion meter
-                                Rectangle()
-                                    .frame(width: 200, height: 22)
-                                    .foregroundColor(.gray)
-                                
-                                // Borders
-                                Rectangle()
-                                    .stroke(.black, lineWidth: 2)
-                                    .frame(width: 200, height: 22)
-                                Rectangle()
-                                    .stroke(.black, lineWidth: 2)
-                                    .frame(width: 120, height: 22)
-                                Rectangle()
-                                    .stroke(.black, lineWidth: 2)
-                                    .frame(width: 40, height: 22)
-                            }
                             
+                            // Completion meter
+                            CompletionMeterView(energy: CGFloat(energy))
                         }
                         
                         // Mentality & Food
@@ -200,7 +183,7 @@ struct GamingView: View {
                             Text("Mentality: \(mentalityState)")
                                 .padding(.trailing, 20)
                             
-                            Image(systemName: "globe")
+                            Image(systemName: "carrot")
                             
                             Text(": 4")
                             
