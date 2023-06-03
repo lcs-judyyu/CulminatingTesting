@@ -21,8 +21,6 @@ struct GamingView: View {
     
     @State var food: Int = 4
     
-    @State var narrative: String = ""
-    
     // MARK: Computed properties
     var mentalityState: String {
         if mentality <= 2 {

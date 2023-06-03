@@ -18,163 +18,171 @@ struct NarrativesAndChoicesView: View {
     
     @State var choiceThree: String = "Third Choice"
     
-    @State var numberOfEdges: Int = 3
+    @State var numberOfEdges: Int = 0
     
     var body: some View {
         
         VStack(alignment: .leading) {
             
-            // Narrative
-            Text(narrative)
-                .padding(.horizontal, 10)
-            
-            Spacer()
-            
-            ZStack(alignment: .bottom) {
+            VStack {
+                // Narrative
+                Text(narrative)
+                    .padding(.horizontal, 10)
                 
-                // Zero edge (ending)
-                HStack (alignment: .center, spacing: 20) {
-                    
-                    // Choice 1
-                    Button(action: {
-                        
-                    }, label: {
-                        HStack {
-                            Spacer()
-                            
-                            Image(systemName: "arrow.counterclockwise")
-                            Text("Restart")
-                            
-                            Spacer()
-                        }
-                    })
-                    .buttonStyle(CustomButton())
-                    
-                    // Choice 2
-                    Button(action: {
-                        
-                    }, label: {
-                        HStack {
-                            Spacer()
-                            
-                            Image(systemName: "house")
-                            Text("Back to Home")
-                            
-                            Spacer()
-                        }
-                    })
-                    .buttonStyle(CustomButton())
-                    
-                    //Spacer()
+                Spacer()
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                if numberOfEdges == 1 {
+                   //Proceed to next edge
                     
                 }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 10)
-                .opacity(numberOfEdges == 0 ? 1 : 0)
-                
-                // One edge
-                
-                
-                // Two choices (edges)
-                HStack {
+            }
+            
+            // Choices
+            VStack {
+                if numberOfEdges == 0 {
                     
-                    Spacer()
-                    
-                    VStack (alignment: .center, spacing: 20) {
+                    withAnimation(.easeIn(duration: 1).delay(10)) {
                         
-                        // Choice 1
-                        Button(action: {
+                        // Zero edge (ending)
+                        HStack (alignment: .center, spacing: 15) {
                             
-                        }, label: {
-                            HStack {
+                            // Restart
+                            Button(action: {
                                 
-                                Spacer()
-                                
-                                Text(choiceOne)
-                                
-                                Spacer()
-                            }
-                        })
-                        .buttonStyle(CustomButton())
-                        
-                        // Choice 2
-                        Button(action: {
+                            }, label: {
+                                HStack {
+                                    Spacer()
+                                    
+                                    Image(systemName: "arrow.counterclockwise")
+                                    Text("Restart")
+                                    
+                                    Spacer()
+                                }
+                            })
+                            .buttonStyle(CustomButton())
                             
-                        }, label: {
-                            HStack {
-                                Spacer()
+                            // Choice 2
+                            Button(action: {
                                 
-                                Text(choiceTwo)
-                                
-                                Spacer()
-                            }
-                        })
-                        .buttonStyle(CustomButton())
+                            }, label: {
+                                HStack {
+                                    Spacer()
+                                    
+                                    Image(systemName: "house")
+                                    Text("Back to Home")
+                                    
+                                    Spacer()
+                                }
+                            })
+                            .buttonStyle(CustomButton())
+                            
+                        }
+                        .padding(.horizontal, 5)
+                        .padding(.vertical, 10)
                     }
                     
-                    //Spacer()
-                }
-                .padding(.horizontal, 40)
-                .padding(.vertical, 10)
-                .opacity(numberOfEdges == 2 ? 1 : 0)
-                
-                // Three choices (edges)
-                HStack {
+                } else if numberOfEdges == 2 {
                     
-                    Spacer()
-                    
-                    VStack (alignment: .center, spacing: 20) {
+                    // Two choices (edges)
+                    HStack {
                         
-                        // Choice 1
-                        Button(action: {
+                        Spacer()
+                        
+                        VStack (alignment: .center, spacing: 20) {
                             
-                        }, label: {
-                            HStack {
+                            // Choice 1
+                            Button(action: {
                                 
-                                Spacer()
-                                
-                                Text(choiceOne)
-                                
-                                Spacer()
-                            }
-                        })
-                        .buttonStyle(CustomButton())
-                        
-                        // Choice 2
-                        Button(action: {
+                            }, label: {
+                                HStack {
+                                    
+                                    Spacer()
+                                    
+                                    Text(choiceOne)
+                                    
+                                    Spacer()
+                                }
+                            })
+                            .buttonStyle(CustomButton())
                             
-                        }, label: {
-                            HStack {
-                                Spacer()
+                            // Choice 2
+                            Button(action: {
                                 
-                                Text(choiceTwo)
-                                
-                                Spacer()
-                            }
-                        })
-                        .buttonStyle(CustomButton())
-                        
-                        // Choice 3
-                        Button(action: {
-                            
-                        }, label: {
-                            HStack {
-                                Spacer()
-                                
-                                Text(choiceThree)
-                                
-                                Spacer()
-                            }
-                        })
-                        .buttonStyle(CustomButton())
-                        
+                            }, label: {
+                                HStack {
+                                    Spacer()
+                                    
+                                    Text(choiceTwo)
+                                    
+                                    Spacer()
+                                }
+                            })
+                            .buttonStyle(CustomButton())
+                        }
                     }
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 10)
                     
-                    //Spacer()
+                } else if numberOfEdges == 3 {
+                    
+                    // Three choices (edges)
+                    HStack {
+                        
+                        Spacer()
+                        
+                        VStack (alignment: .center, spacing: 20) {
+                            
+                            // Choice 1
+                            Button(action: {
+                                
+                            }, label: {
+                                HStack {
+                                    
+                                    Spacer()
+                                    
+                                    Text(choiceOne)
+                                    
+                                    Spacer()
+                                }
+                            })
+                            .buttonStyle(CustomButton())
+                            
+                            // Choice 2
+                            Button(action: {
+                                
+                            }, label: {
+                                HStack {
+                                    Spacer()
+                                    
+                                    Text(choiceTwo)
+                                    
+                                    Spacer()
+                                }
+                            })
+                            .buttonStyle(CustomButton())
+                            
+                            // Choice 3
+                            Button(action: {
+                                
+                            }, label: {
+                                HStack {
+                                    Spacer()
+                                    
+                                    Text(choiceThree)
+                                    
+                                    Spacer()
+                                }
+                            })
+                            .buttonStyle(CustomButton())
+                            
+                        }
+                    }
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 10)
+                    
                 }
-                .padding(.horizontal, 40)
-                .padding(.vertical, 10)
-                .opacity(numberOfEdges == 3 ? 1 : 0)
             }
             
         }
@@ -182,6 +190,7 @@ struct NarrativesAndChoicesView: View {
     }
 }
 
+// Preview provider
 struct NarrativesAndChoicesView_Previews: PreviewProvider {
     static var previews: some View {
         NarrativesAndChoicesView()
