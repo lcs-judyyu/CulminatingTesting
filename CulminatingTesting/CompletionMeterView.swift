@@ -12,16 +12,16 @@ struct CompletionMeterView: View {
     
     // MARK: Stored properties
     
-    // Show up to x percentage
+    // Show up to x
     @State private var fillToWidth: CGFloat = 0.0
     
-    // Controls the amount of trim to show
+    // Controls the amount
     let energy: CGFloat
     
     // Set timer
     let timer = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
     
-    let width: CGFloat = 200.0
+    let width: CGFloat = 190.0
     
     let height: CGFloat = 22.0
     
@@ -39,7 +39,7 @@ struct CompletionMeterView: View {
                 .frame(width: fillToWidth, height: height)
                 .foregroundColor(.white)
                 .onChange(of: energy) { newEnergy in
-                    withAnimation(.easeInOut(duration: 0.2)) {
+                    withAnimation(.easeInOut(duration: 0.01)) {
                         fillToWidth = CGFloat(energy / 10) * width
                     }
                 }
@@ -58,17 +58,10 @@ struct CompletionMeterView: View {
                 // Borders
                 ForEach(0..<3) { i in
                     Rectangle()
-                        .stroke(.black, lineWidth: 2)
-                        .frame(width: width - CGFloat(i * 80), height: height)
+                        .stroke(.black, lineWidth: 3)
+                        .frame(width: width - CGFloat(i * Int(width) / 5 * 2), height: height)
                 }
             }
-            
-//            Stepper("", value: $energy, in: 0...10)
-//            Text("is \(energy)")
-//
-//            Text("\(Int(fillToWidth))/200")
-//                .padding(.leading, 50)
-            
         }
     }
 }

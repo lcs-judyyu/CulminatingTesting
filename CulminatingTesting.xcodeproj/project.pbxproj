@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22074AF42A28D36000D838FE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22074AF32A28D36000D838FE /* SettingsView.swift */; };
 		223DE01A2A2A3A1500F8EDC5 /* CompletionMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DE0192A2A3A1500F8EDC5 /* CompletionMeterView.swift */; };
+		223DE01E2A2BB1B400F8EDC5 /* NarrativesAndChoicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DE01D2A2BB1B400F8EDC5 /* NarrativesAndChoicesView.swift */; };
 		2267536A2A28E6B000130C69 /* ButtonStyleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226753692A28E6B000130C69 /* ButtonStyleViewModifier.swift */; };
 		22CEAB852A25AA8B009F5C58 /* CulminatingTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CEAB842A25AA8B009F5C58 /* CulminatingTestingApp.swift */; };
 		22CEAB872A25AA8B009F5C58 /* GamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CEAB862A25AA8B009F5C58 /* GamingView.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		22074AF32A28D36000D838FE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		223DE0192A2A3A1500F8EDC5 /* CompletionMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionMeterView.swift; sourceTree = "<group>"; };
+		223DE01D2A2BB1B400F8EDC5 /* NarrativesAndChoicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarrativesAndChoicesView.swift; sourceTree = "<group>"; };
 		226753692A28E6B000130C69 /* ButtonStyleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleViewModifier.swift; sourceTree = "<group>"; };
 		22CEAB812A25AA8B009F5C58 /* CulminatingTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CulminatingTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CEAB842A25AA8B009F5C58 /* CulminatingTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulminatingTestingApp.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			children = (
 				22CEAB842A25AA8B009F5C58 /* CulminatingTestingApp.swift */,
 				22CEAB862A25AA8B009F5C58 /* GamingView.swift */,
+				223DE01D2A2BB1B400F8EDC5 /* NarrativesAndChoicesView.swift */,
 				223DE0192A2A3A1500F8EDC5 /* CompletionMeterView.swift */,
 				22074AF32A28D36000D838FE /* SettingsView.swift */,
 				226753692A28E6B000130C69 /* ButtonStyleViewModifier.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223DE01E2A2BB1B400F8EDC5 /* NarrativesAndChoicesView.swift in Sources */,
 				22074AF42A28D36000D838FE /* SettingsView.swift in Sources */,
 				22CEAB872A25AA8B009F5C58 /* GamingView.swift in Sources */,
 				22CEAB852A25AA8B009F5C58 /* CulminatingTestingApp.swift in Sources */,

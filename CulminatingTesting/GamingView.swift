@@ -56,7 +56,6 @@ struct GamingView: View {
         }
     }
     
-    // MARK: Body
     var body: some View {
         
         ZStack {
@@ -86,71 +85,9 @@ struct GamingView: View {
                         .resizable()
                         .scaledToFit()
                     
-                    // Description
-                    Text("There are two possible destinations where you can find resources to help you survive, where should you go?\n\nNote: it is an important decision which will influence the story development.")
-                        .padding(.horizontal, 10)
-                    
-                    Spacer()
-                    
-                    HStack {
-                        
-                        Spacer()
-                        
-                        VStack (alignment: .center, spacing: 20) {
-                            
-                            // Choice 1
-                            Button(action: {
-                                
-                            }, label: {
-                                HStack {
-                                    
-                                    Spacer()
-                                    
-                                    Text("The Park")
-                                    
-                                    Spacer()
-                                }
-                            })
-                            .buttonStyle(CustomButton())
-                            
-                            // Choice 2
-                            Button(action: {
-                                
-                            }, label: {
-                                HStack {
-                                    Spacer()
-                                    
-                                    Text("The Hospital")
-                                    
-                                    Spacer()
-                                }
-                            })
-                            .buttonStyle(CustomButton())
-                            
-                            // Choice 3
-                            Button(action: {
-                                
-                            }, label: {
-                                HStack {
-                                    Spacer()
-                                    
-                                    Text("Third choice")
-                                    
-                                    Spacer()
-                                }
-                            })
-                            .buttonStyle(CustomButton())
-                            
-                        }
-                        
-                        Spacer()
-                    }
-                    .padding(.horizontal, 40)
-                    .padding(.vertical, 10)
+                    NarrativesAndChoicesView()
                     
                 }
-                
-                Spacer()
                 
                 // Display changes in values
                 Text("Energy - 1, Food + 3")
@@ -225,6 +162,7 @@ struct GamingView: View {
             
             SettingsView(show: $showPopUp)
         }
+        .foregroundColor(.white)
         
     }
 }
