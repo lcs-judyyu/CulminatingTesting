@@ -183,7 +183,9 @@ struct GamingView: View {
                             Text("Mentality: \(mentalityState)")
                                 .padding(.trailing, 20)
                             
-                            Image(systemName: "carrot")
+                            Image("Bread")
+                                .resizable()
+                                .frame(width: 15, height: 15)
                             
                             Text(": 4")
                             
