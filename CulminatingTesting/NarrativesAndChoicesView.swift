@@ -18,32 +18,41 @@ struct NarrativesAndChoicesView: View {
     
     @State var choiceThree: String = "Third Choice"
     
-    @State var numberOfEdges: Int = 0
+    @State var numberOfEdges: Int = 2
+    
+    @State var zeroEdgeShowButton = false
     
     var body: some View {
         
         VStack(alignment: .leading) {
             
-            VStack {
+            VStack(alignment: .leading) {
                 // Narrative
                 Text(narrative)
                     .padding(.horizontal, 10)
                 
                 Spacer()
             }
-            .contentShape(Rectangle())
+            //.background(.yellow)
+            //.contentShape(Rectangle())
             .onTapGesture {
                 if numberOfEdges == 1 {
                    //Proceed to next edge
                     
                 }
             }
+            .onAppear {
+                if numberOfEdges == 0 {
+                    withAnimation(.easeIn(duration: 1).delay(3)) {
+                        zeroEdgeShowButton = true
+                    }
+                }
+            }
             
             // Choices
             VStack {
+                
                 if numberOfEdges == 0 {
-                    
-                    withAnimation(.easeIn(duration: 1).delay(10)) {
                         
                         // Zero edge (ending)
                         HStack (alignment: .center, spacing: 15) {
@@ -81,7 +90,8 @@ struct NarrativesAndChoicesView: View {
                         }
                         .padding(.horizontal, 5)
                         .padding(.vertical, 10)
-                    }
+                        .opacity(zeroEdgeShowButton ? 1 : 0)
+                        //.background(.purple)
                     
                 } else if numberOfEdges == 2 {
                     
