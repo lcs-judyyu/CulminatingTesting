@@ -26,11 +26,17 @@ struct TypewriterEffectTest: View {
     @State private var value = 0
 
     let message = "There are two possible destinations where you can find resources to help you survive, where should you go?\n\nNote: it is an important decision which will influence the story development."
+    
+    let message2 = "There are two possible destinations where you can find resources to help you survive, where should you go?"
+    
 
     var body: some View {
         ZStack {
             VStack {
                 TypeWriterText(string: message, count: value)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                TypeWriterText(string: message2, count: value)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 Spacer()

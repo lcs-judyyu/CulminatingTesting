@@ -7,10 +7,23 @@
 
 import Foundation
 import SwiftUI
+import AudioToolbox
+
+struct SoundEffect: Hashable {
+    let id: SystemSoundID
+    let name: String
+
+    func play() {
+        AudioServicesPlaySystemSoundWithCompletion(id, nil)
+    }
+}
 
 // Adapted from: https://www.hackingwithswift.com/quick-start/swiftui/customizing-button-with-buttonstyle
 // Button style
 struct CustomButton: ButtonStyle {
+    
+    typealias SystemSoundID = UInt32
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .buttonStyle(.plain)
@@ -20,5 +33,6 @@ struct CustomButton: ButtonStyle {
             .background(configuration.isPressed ? .gray.opacity(0.2) : .black)
             .border(.white)
             .cornerRadius(6)
+
     }
 }
