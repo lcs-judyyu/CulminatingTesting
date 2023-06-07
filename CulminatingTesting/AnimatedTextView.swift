@@ -15,14 +15,14 @@ struct AnimatedTextView: View {
     
     @State var blurOpacity = 0.6
     
-    @State var blurSize = 70.0
+    @State var blurSize = 60.0
     
     var body: some View {
         ZStack {
             
             Ellipse()
                 .foregroundColor(.white.opacity(blurOpacity))
-                .frame(width: 300, height: 200)
+                .frame(width: 290, height: 190)
                 .blur(radius: blurSize)
             
             VStack {
@@ -33,15 +33,15 @@ struct AnimatedTextView: View {
             .font(.custom("Copperplate", fixedSize: size))
             .bold()
             .foregroundColor(color)
-            .shadow(radius: 10)
+            .shadow(radius: 30)
 
         }
         .onAppear {
             withAnimation(.easeInOut(duration: 2).repeatForever(autoreverses: true)) {
                 size = 100.1
                 color = .white.opacity(0.5)
-                blurOpacity = 0.5
-                blurSize = 67.0
+                blurOpacity = 0.4
+                blurSize = 57.0
             }
         }
 
