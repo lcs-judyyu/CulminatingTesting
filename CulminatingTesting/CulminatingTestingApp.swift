@@ -12,7 +12,7 @@ struct CulminatingTestingApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                AnimatedTextView()
+                TypewriterEffectTest2()
             }
         }
     }

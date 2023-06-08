@@ -10,13 +10,20 @@ import SwiftUI
 struct TypewriterEffectTest2: View {
     @State var text: String = ""
         let finalText: String = "There are two possible destinations where you can find resources to help you survive, where should you go?\n\nNote: it is an important decision which will influence the story development."
+    
+    @State var speed = 0.02
         
         var body: some View {
             VStack {
                 Text(text)
                     .frame(maxWidth: .infinity, maxHeight:.infinity, alignment: .topLeading)
                     .onAppear {
-                        typeWriter()
+                        withAnimation(.default.delay(3)) {
+                            typeWriter()
+                        }
+                    }
+                    .onTapGesture {
+                        speed = 0
                     }
             }
         }
@@ -27,9 +34,16 @@ struct TypewriterEffectTest2: View {
                 text = ""
             }
             if position < finalText.count {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                    text.append(finalText[position])
-                    typeWriter(at: position + 1)
+                if finalText[position] == "\n" {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + speed * 8) {
+                        text.append(finalText[position])
+                        typeWriter(at: position + 1)
+                    }
+                } else {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + speed) {
+                        text.append(finalText[position])
+                        typeWriter(at: position + 1)
+                    }
                 }
             }
         }

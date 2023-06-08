@@ -44,7 +44,7 @@ struct TypewriterEffectTest: View {
             .padding()
         }
         .onAppear {
-            withAnimation(.linear(duration: 5)) {
+            withAnimation(.linear(duration: 10)) {
                 value = message.count
             }
         }
