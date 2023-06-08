@@ -11,7 +11,7 @@ struct TypewriterEffectTest2: View {
     @State var text: String = ""
         let finalText: String = "There are two possible destinations where you can find resources to help you survive, where should you go?\n\nNote: it is an important decision which will influence the story development."
     
-    @State var speed = 0.02
+    @State var speed = 0.03
         
         var body: some View {
             VStack {
@@ -34,7 +34,7 @@ struct TypewriterEffectTest2: View {
                 text = ""
             }
             if position < finalText.count {
-                if finalText[position] == "\n" {
+                if finalText[position] == "\n" || finalText[position] == "," || finalText[position] == ":" {
                     DispatchQueue.main.asyncAfter(deadline: .now() + speed * 8) {
                         text.append(finalText[position])
                         typeWriter(at: position + 1)

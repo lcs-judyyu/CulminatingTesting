@@ -14,6 +14,7 @@
 		223DE01A2A2A3A1500F8EDC5 /* CompletionMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DE0192A2A3A1500F8EDC5 /* CompletionMeterView.swift */; };
 		223DE01E2A2BB1B400F8EDC5 /* NarrativesAndChoicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DE01D2A2BB1B400F8EDC5 /* NarrativesAndChoicesView.swift */; };
 		2267536A2A28E6B000130C69 /* ButtonStyleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226753692A28E6B000130C69 /* ButtonStyleViewModifier.swift */; };
+		22891C012A32075D0072A3B1 /* SpeedSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22891C002A32075D0072A3B1 /* SpeedSliderView.swift */; };
 		22CEAB852A25AA8B009F5C58 /* CulminatingTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CEAB842A25AA8B009F5C58 /* CulminatingTestingApp.swift */; };
 		22CEAB872A25AA8B009F5C58 /* GamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CEAB862A25AA8B009F5C58 /* GamingView.swift */; };
 		22CEAB892A25AA8C009F5C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CEAB882A25AA8C009F5C58 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		223DE0192A2A3A1500F8EDC5 /* CompletionMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionMeterView.swift; sourceTree = "<group>"; };
 		223DE01D2A2BB1B400F8EDC5 /* NarrativesAndChoicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarrativesAndChoicesView.swift; sourceTree = "<group>"; };
 		226753692A28E6B000130C69 /* ButtonStyleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleViewModifier.swift; sourceTree = "<group>"; };
+		22891C002A32075D0072A3B1 /* SpeedSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedSliderView.swift; sourceTree = "<group>"; };
 		22CEAB812A25AA8B009F5C58 /* CulminatingTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CulminatingTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CEAB842A25AA8B009F5C58 /* CulminatingTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulminatingTestingApp.swift; sourceTree = "<group>"; };
 		22CEAB862A25AA8B009F5C58 /* GamingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamingView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				22268C7D2A2BDBD800DE3AFC /* TypewriterEffectTest.swift */,
 				22268C812A2BE5C900DE3AFC /* TypewriterEffectTest2.swift */,
 				22263B2D2A30395C005CFAD1 /* AnimatedTextView.swift */,
+				22891C002A32075D0072A3B1 /* SpeedSliderView.swift */,
 				22CEAB882A25AA8C009F5C58 /* Assets.xcassets */,
 				22CEAB8A2A25AA8C009F5C58 /* Preview Content */,
 			);
@@ -163,6 +166,7 @@
 				22074AF42A28D36000D838FE /* SettingsView.swift in Sources */,
 				22CEAB872A25AA8B009F5C58 /* GamingView.swift in Sources */,
 				22268C7E2A2BDBD800DE3AFC /* TypewriterEffectTest.swift in Sources */,
+				22891C012A32075D0072A3B1 /* SpeedSliderView.swift in Sources */,
 				22268C822A2BE5C900DE3AFC /* TypewriterEffectTest2.swift in Sources */,
 				22CEAB852A25AA8B009F5C58 /* CulminatingTestingApp.swift in Sources */,
 				223DE01A2A2A3A1500F8EDC5 /* CompletionMeterView.swift in Sources */,
